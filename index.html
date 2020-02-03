@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo"><img src="./images/logo.svg" alt="" /></div>
+      <div class="details_div">
+        <div class="detail">
+          <h1>WE'RE</h1>
+          <h2>COMING SOON</h2>
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals. Email Address
+          </p>
+          <div class="form">
+            <input
+              type="text"
+              placeholder="Email Address"
+              id="mail"
+              name="mail"
+            />
+            <img src="./images/icon-error.svg" alt="error" class="error" />
+            <button onclick="emailcheck()">
+              <img src="./images/icon-arrow.svg" alt="icon_arrow" />
+            </button>
+            <p class="error_para">Pleas provide a valid email</p>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="./images/hero-desktop.jpg" alt="desktop-image" id="img" />
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function() {
+      if ($(window).width() <= 375) {
+        $("#img").attr("src", "./images/hero-mobile.jpg");
+      } else {
+        $("#img").attr("src", "./images/hero-desktop.jpg");
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</html>
